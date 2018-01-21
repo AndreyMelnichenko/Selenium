@@ -1,9 +1,8 @@
 package com.google;
 
 import google.core.WebDriverTestBase;
-import google.pages.GoogleLoginPage;
-import google.pages.GoogleResultPage;
-import google.pages.GoogleSearchPage;
+import google.pages.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -25,7 +24,20 @@ public class SearchGoogleTest extends WebDriverTestBase {
         driver.get("https://gmail.com");
         GoogleLoginPage loginPage = new GoogleLoginPage(driver);
         loginPage.inputLogin();
-        loginPage.inputPass();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        GooglePassPage passPage = new GooglePassPage(driver);
+        passPage.inputPass();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        GoogleInsideMailPage insideMailPage = new GoogleInsideMailPage(driver);
+        assertTrue((insideMailPage.checkEnter()).equals(loginPage.getLogin()));
 
     }
 }
