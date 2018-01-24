@@ -2,7 +2,6 @@ package com.google;
 
 import google.core.WebDriverTestBase;
 import google.pages.*;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
