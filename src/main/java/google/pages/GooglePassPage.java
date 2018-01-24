@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class GooglePassPage {
     private By passFieldLocator = By.xpath("//input[@type='password']");
     private WebElement passField;
-    private String pass = "Gp2l95m7TRB1043iCim8";
+    private String pass = "***************************";
     private By passButtonLocator = By.cssSelector("#passwordNext > content");
     private WebDriver driver;
 
