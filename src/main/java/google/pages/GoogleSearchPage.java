@@ -3,6 +3,8 @@ package google.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
@@ -12,7 +14,7 @@ public class GoogleSearchPage extends AbstractPage {
         super(webDriver);
     }
 
-    //@FindBy(how= How.XPATH, xpath ="//input[@id='lst-ib']")
+    @FindBy(how= How.XPATH, using ="//input[@id='lst-ib']")
     private By inputFieldLocator = By.xpath("//input[@id='lst-ib']");
     private WebElement searchField;
 
