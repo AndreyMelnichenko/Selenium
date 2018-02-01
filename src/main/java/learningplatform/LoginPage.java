@@ -1,6 +1,6 @@
 package learningplatform;
 
-import google.core.WebDriverTestBase;
+import google.Selenium.core.WebDriverTestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

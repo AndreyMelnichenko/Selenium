@@ -1,4 +1,4 @@
-package google.pages;
+package google.Selenium.pages;
 
 public class WebDriverUtil {
 

@@ -1,6 +1,6 @@
 package com.openenglish.stg.learningplatform;
 
-import google.core.WebDriverTestBase;
+import google.Selenium.core.WebDriverTestBase;
 import learningplatform.LoginPage;
 import org.testng.annotations.Test;
 
