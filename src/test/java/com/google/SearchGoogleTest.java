@@ -40,7 +40,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        GooglePassPage passPage = new GooglePassPage(driver);
+        /*GooglePassPage passPage = new GooglePassPage(driver);
         passPage.inputPass();
         try {
             Thread.sleep(2000);
@@ -48,7 +48,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
             e.printStackTrace();
         }
         GoogleInsideMailPage insideMailPage = new GoogleInsideMailPage(driver);
-        assertTrue((insideMailPage.checkEnter()).equals(loginPage.getLogin()));
+        assertTrue((insideMailPage.checkEnter()).equals(loginPage.getLogin()));*/
 
     }
 }
