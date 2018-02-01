@@ -9,16 +9,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverTestBase {
     protected WebDriver driver;
     //private static String OS = System.getProperty("os.name").toLowerCase();
-    private Browser browser =  Browser.valueOf(System.getProperty("browser"));
+    private Browser browser = Browser.valueOf(System.getProperty("browser"));
 
     @BeforeClass
     protected void SetUp() {
-        switch (browser){
+        switch (browser) {
             case CHROME:
                 ChromeDriverManager.getInstance().setup();
                 driver = new ChromeDriver();
@@ -30,6 +31,10 @@ public class WebDriverTestBase {
             case IE:
                 InternetExplorerDriverManager.getInstance().setup();
                 driver = new InternetExplorerDriver();
+                break;
+            default:
+                FirefoxDriverManager.getInstance().setup();
+                driver = new FirefoxDriver();
                 break;
         }
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
