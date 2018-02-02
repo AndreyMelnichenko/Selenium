@@ -10,17 +10,12 @@ import static org.testng.Assert.assertTrue;
 
 public class SearchGoogleTest extends WebDriverTestBase {
 
-    private String searchData = "Selenium";
+    private final String searchData = "Selenium";
+    private final  String url = "https://www.google.com.ua";
 
     @Test
     public void searchGoogleTest(){
-        driver.get("https://www.google.com.ua");
-        /*FirefoxDriverManager.getInstance().setup();
-        open("https://www.google.com.ua");
-        $(By.xpath("//input[@id='lst-ib']"))
-                .val(searchData).submit();
-        $(By.xpath("//div[@class='rc']/h3/a[1]"))
-                .should(Condition.visible, text(searchData));*/
+        driver.get(url);
         GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
         page.searchFor(searchData);
         GoogleResultPage resultPage = PageFactory.initElements(driver, GoogleResultPage.class);

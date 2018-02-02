@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public abstract class AbstractPage {
-    protected WebDriver webDriver;
+abstract class AbstractPage {
+    private WebDriver webDriver;
     private WebDriverWait webDriverWait;
     public AbstractPage(WebDriver webDriver) {
         this.webDriver = webDriver;

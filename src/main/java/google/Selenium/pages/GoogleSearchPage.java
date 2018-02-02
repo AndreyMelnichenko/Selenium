@@ -15,14 +15,15 @@ public class GoogleSearchPage extends AbstractPage {
     }
 
     @FindBy(how= How.XPATH, using ="//input[@id='lst-ib']")
-    private By inputFieldLocator = By.xpath("//input[@id='lst-ib']");
-    private WebElement searchField;
+    private WebElement inputFieldLocator; // = By.xpath("//input[@id='lst-ib']");
+
+    //private WebElement searchField;
+
 
     public void searchFor (String text){
-        //searchField = driver.findElement();
+        WebElement searchField;
         searchField = waitFor(presenceOfElementLocated(inputFieldLocator));
-        searchField.sendKeys(text);
-        searchField.submit();
-
+        inputFieldLocator.sendKeys(text);
+        inputFieldLocator.submit();
     }
 }
