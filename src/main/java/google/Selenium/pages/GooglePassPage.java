@@ -1,25 +1,25 @@
 package google.Selenium.pages;
 
-import org.openqa.selenium.By;
+import google.Selenide.util.PropertiesCache;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
-public class GooglePassPage {
-    private By passFieldLocator = By.xpath("//input[@type='password']");
+public class GooglePassPage extends AbstractPage {
+
+    @FindBy(how= How.XPATH, using ="//*[@id=\"password\"]/div[1]/div/div[1]/input")//input[@type='password']");
     private WebElement passField;
-    private String pass = "***************************";
-    private By passButtonLocator = By.cssSelector("#passwordNext > content");
-    private WebDriver driver;
 
-    public GooglePassPage(WebDriver driver) {
-        this.driver = driver;
+    @FindBy(how= How.CSS, using ="#passwordNext > content > span")
+    private WebElement passButton;
+
+    public GooglePassPage(WebDriver webDriver) {
+        super(webDriver);
     }
 
     public void inputPass (){
-        passField = driver.findElement(passFieldLocator);
-        passField.click();
-        passField.sendKeys(pass);
-        WebElement passButton = driver.findElement(passButtonLocator);
+        passField.sendKeys(PropertiesCache.getProperty("login.pass"));
         passButton.click();
     }
 }
