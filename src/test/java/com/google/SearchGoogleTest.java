@@ -2,14 +2,12 @@ package com.google;
 
 import google.Selenide.util.PropertiesCache;
 import google.Selenium.core.WebDriverTestBase;
-import google.Selenium.pages.GoogleLoginPage;
-import google.Selenium.pages.GooglePassPage;
-import google.Selenium.pages.GoogleResultPage;
-import google.Selenium.pages.GoogleSearchPage;
+import google.Selenium.pages.*;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class SearchGoogleTest extends WebDriverTestBase {
@@ -37,8 +35,14 @@ public class SearchGoogleTest extends WebDriverTestBase {
         GooglePassPage passPage = PageFactory.initElements(driver, GooglePassPage.class);
         passPage.inputPass(driver);
         Assert.assertEquals(page.getActualMail(driver), PropertiesCache.getProperty("login.user"));
+    }
 
-
+    @Test
+    public void newsPage(){
+        driver.get(url);
+        GoogleNewPage news = PageFactory.initElements(driver, GoogleNewPage.class);
+        news.goNewsPage();
+        assertEquals(news.getActualPage(),"Украина");
     }
 }
 
