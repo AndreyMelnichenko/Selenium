@@ -1,11 +1,11 @@
 package com.google;
 
 import google.Selenide.util.PropertiesCache;
+import google.Selenium.core.WebDriverTestBase;
 import google.Selenium.pages.GoogleLoginPage;
 import google.Selenium.pages.GooglePassPage;
 import google.Selenium.pages.GoogleResultPage;
 import google.Selenium.pages.GoogleSearchPage;
-import google.Selenium.core.WebDriverTestBase;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -34,19 +34,9 @@ public class SearchGoogleTest extends WebDriverTestBase {
         page.goLoginPage();
         GoogleLoginPage loginPage = PageFactory.initElements(driver, GoogleLoginPage.class);
         loginPage.inputLogin();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         GooglePassPage passPage = PageFactory.initElements(driver, GooglePassPage.class);
-        passPage.inputPass();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Assert.assertEquals(page.getActualMail(), PropertiesCache.getProperty("login.user"));
+        passPage.inputPass(driver);
+        Assert.assertEquals(page.getActualMail(driver), PropertiesCache.getProperty("login.user"));
 
 
     }

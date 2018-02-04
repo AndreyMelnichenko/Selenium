@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GoogleSearchPage extends AbstractPage {
 
@@ -31,13 +33,11 @@ public class GoogleSearchPage extends AbstractPage {
         goGoogleEnter.isDisplayed();
         goGoogleEnter.click();
     }
-    public String getActualMail(){
-        logoPic.click();
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return actualMail.getText();
+    public String getActualMail(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,2);
+        WebElement logo = wait.until(ExpectedConditions.elementToBeClickable(logoPic));
+        logo.click();
+        WebElement actMail = wait.until(ExpectedConditions.visibilityOf(actualMail));
+        return actMail.getText();
     }
 }
