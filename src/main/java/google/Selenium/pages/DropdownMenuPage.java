@@ -1,5 +1,6 @@
 package google.Selenium.pages;
 
+import google.Selenium.util.RandomMinMax;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ public class DropdownMenuPage {
     public DropdownMenuPage(WebDriver driver) {
         this.driver = driver;
     }
+
     private By menuLocator = By.xpath("/html/body/select");
     private WebElement menu;
 
@@ -18,12 +20,17 @@ public class DropdownMenuPage {
         menu=driver.findElement(menuLocator);
         return  menu;
     }
-    public void selectItem(WebElement menu){
-        Select selectObject = new Select(menu);
-        selectObject.deselectByValue("Audi");
+    public String getActualelement(WebElement menu) {
+        Select select = new Select(menu);
+        return select.getFirstSelectedOption().getText();
     }
-    public WebElement getChoosedAuto(WebElement menu){
-        Select selectObject = new Select(menu);
-        return selectObject.getFirstSelectedOption();
+    public String setElement (){
+        Select select = new Select(menu);
+        int i;
+        do {
+            i=RandomMinMax.Go(0,3);
+        } while (i==0);
+        select.selectByIndex(i);
+        return select.getFirstSelectedOption().getText();
     }
 }
