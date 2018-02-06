@@ -18,7 +18,7 @@ public class GoogleNewPage extends AbstractPage {
     @FindBy(how = How.XPATH, using = "//span[text()='Украина']")
     private WebElement selectItem;
     @FindBy(how = How.XPATH, using = "(//span[@class='adH5zf'])[2]")
-    WebElement actItem;
+    private WebElement actItem;
 
     public void goNewsPage(){
        WebElement presentedOption= waitFor(ExpectedConditions.elementToBeClickable(options));

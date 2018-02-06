@@ -3,93 +3,56 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="595.0" y="125.0">google.Selenium.pages.GoogleResultPage</node>
-    <node x="1212.5" y="12.0">google.Selenium.core.TestListener</node>
-    <node x="946.0" y="240.0">com.google.SearchGoogleTest</node>
-    <node x="1391.0" y="125.0">google.Selenium.pages.GoogleLoginPage</node>
-    <node x="290.0" y="125.0">google.Selenium.pages.GoogleSearchPage</node>
-    <node x="897.0" y="125.0">google.Selenium.pages.GoogleNewPage</node>
-    <node x="0.0" y="125.0">google.Selenium.pages.GooglePassPage</node>
-    <node x="482.16666666666663" y="0.0">google.Selenium.pages.AbstractPage</node>
-    <node x="1187.0" y="137.0">google.Selenium.core.WebDriverTestBase</node>
+    <node x="254.0" y="146.0">google.Selenium.pages.GoogleNewPage</node>
+    <node x="988.0" y="179.0">google.Selenium.pages.GoogleResultPage</node>
+    <node x="497.0" y="168.0">google.Selenium.pages.GooglePassPage</node>
+    <node x="206.0" y="331.0">google.Selenium.core.TestListener</node>
+    <node x="0.0" y="432.0">com.google.SearchGoogleTest</node>
+    <node x="494.0" y="0.0">google.Selenium.pages.AbstractPage</node>
+    <node x="739.0" y="168.0">google.Selenium.pages.GoogleLoginPage</node>
+    <node x="2.0" y="331.0">google.Selenium.core.WebDriverTestBase</node>
+    <node x="0.0" y="146.0">google.Selenium.pages.GoogleSearchPage</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="google.Selenium.pages.GoogleSearchPage" target="google.Selenium.pages.AbstractPage">
-      <point x="71.25" y="-27.5" />
-      <point x="503.75" y="105.0" />
-      <point x="591.1041666666666" y="105.0" />
-      <point x="-15.5625" y="27.5" />
-    </edge>
-    <edge source="com.google.SearchGoogleTest" target="google.Selenium.pages.GoogleNewPage">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="27.5" />
-    </edge>
-    <edge source="com.google.SearchGoogleTest" target="google.Selenium.pages.GooglePassPage">
-      <point x="-73.71428571428578" y="-15.5" />
-      <point x="958.2857142857142" y="220.0" />
-      <point x="135.0" y="220.0" />
-      <point x="0.0" y="27.5" />
-    </edge>
-    <edge source="google.Selenium.pages.GooglePassPage" target="google.Selenium.pages.AbstractPage">
-      <point x="67.5" y="-27.5" />
-      <point x="202.5" y="85.0" />
-      <point x="528.8541666666666" y="85.0" />
-      <point x="-77.8125" y="27.5" />
-    </edge>
-    <edge source="com.google.SearchGoogleTest" target="google.Selenium.pages.GoogleSearchPage">
-      <point x="-49.14285714285711" y="-15.5" />
-      <point x="982.8571428571429" y="210.0" />
-      <point x="432.5" y="210.0" />
-      <point x="0.0" y="27.5" />
-    </edge>
     <edge source="com.google.SearchGoogleTest" target="google.Selenium.core.WebDriverTestBase">
-      <point x="49.14285714285711" y="-15.5" />
-      <point x="1081.142857142857" y="210.0" />
-      <point x="1325.0" y="210.0" />
-      <point x="46.0" y="15.5" />
-    </edge>
-    <edge source="com.google.SearchGoogleTest" target="google.Selenium.pages.GoogleLoginPage">
-      <point x="73.71428571428578" y="-15.5" />
-      <point x="1105.7142857142858" y="220.0" />
-      <point x="1530.0" y="220.0" />
-      <point x="0.0" y="27.5" />
-    </edge>
-    <edge source="google.Selenium.core.WebDriverTestBase" target="google.Selenium.core.TestListener">
-      <point x="-46.0" y="-15.5" />
-      <point x="1233.0" y="105.0" />
-      <point x="1245.75" y="105.0" />
-      <point x="-33.25" y="15.5" />
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="25.5" />
     </edge>
     <edge source="google.Selenium.pages.GoogleNewPage" target="google.Selenium.pages.AbstractPage">
-      <point x="-67.5" y="-27.5" />
-      <point x="964.5" y="85.0" />
-      <point x="684.4791666666666" y="85.0" />
-      <point x="77.8125" y="27.5" />
+      <point x="0.0" y="-70.0" />
+      <point x="365.5" y="126.0" />
+      <point x="562.4" y="126.0" />
+      <point x="-45.60000000000002" y="48.0" />
+    </edge>
+    <edge source="google.Selenium.pages.GoogleSearchPage" target="google.Selenium.pages.AbstractPage">
+      <point x="0.0" y="-70.0" />
+      <point x="117.0" y="116.0" />
+      <point x="516.8" y="116.0" />
+      <point x="-91.20000000000005" y="48.0" />
+    </edge>
+    <edge source="google.Selenium.pages.GoogleLoginPage" target="google.Selenium.pages.AbstractPage">
+      <point x="0.0" y="-48.0" />
+      <point x="853.5" y="126.0" />
+      <point x="653.5999999999999" y="126.0" />
+      <point x="45.59999999999991" y="48.0" />
+    </edge>
+    <edge source="google.Selenium.pages.GooglePassPage" target="google.Selenium.pages.AbstractPage">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="48.0" />
     </edge>
     <edge source="google.Selenium.pages.GoogleResultPage" target="google.Selenium.pages.AbstractPage">
-      <point x="70.5" y="-27.5" />
-      <point x="806.5" y="95.0" />
-      <point x="653.3541666666666" y="95.0" />
-      <point x="46.6875" y="27.5" />
-    </edge>
-    <edge source="com.google.SearchGoogleTest" target="google.Selenium.pages.GoogleResultPage">
-      <point x="-24.571428571428555" y="-15.5" />
-      <point x="1007.4285714285713" y="200.0" />
-      <point x="736.0" y="200.0" />
-      <point x="0.0" y="27.5" />
-    </edge>
-    <edge source="google.Selenium.core.TestListener" target="google.Selenium.core.WebDriverTestBase">
-      <point x="33.25" y="15.5" />
-      <point x="1312.25" y="105.0" />
-      <point x="1325.0" y="105.0" />
-      <point x="46.0" y="-15.5" />
+      <point x="0.0" y="-37.0" />
+      <point x="1103.5" y="116.0" />
+      <point x="699.1999999999999" y="116.0" />
+      <point x="91.19999999999993" y="48.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.3000000000000003" x="637.0" y="207.0" />
+  <settings layout="Hierarchic Group" zoom="0.9" x="262.0" y="193.11111111111111" />
   <SelectedNodes />
   <Categories>
     <Category>Constructors</Category>
+    <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
