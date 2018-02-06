@@ -25,7 +25,7 @@ public class GoogleLoginPage extends AbstractPage {
         WebElement clikButton = waitFor(ExpectedConditions.elementToBeClickable(loginButton));
         clikButton.click();
     }
-    public String getLogin() {
+    /*public String getLogin() {
         return PropertiesCache.getProperty("login.user");
-    }
+    }*/
 }
