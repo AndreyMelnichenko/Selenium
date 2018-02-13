@@ -13,8 +13,6 @@ public class GoogleLoginPage extends AbstractPage {
     @FindBy(how = How.CSS, using="#identifierNext > content > span")
     private WebElement loginButton;
 
-    //private WebDriver driver;
-
     public GoogleLoginPage(WebDriver driver) {
         super(driver);
     }
@@ -25,7 +23,4 @@ public class GoogleLoginPage extends AbstractPage {
         WebElement clikButton = waitFor(ExpectedConditions.elementToBeClickable(loginButton));
         clikButton.click();
     }
-    /*public String getLogin() {
-        return PropertiesCache.getProperty("login.user");
-    }*/
 }

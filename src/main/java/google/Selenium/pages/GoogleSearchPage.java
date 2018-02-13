@@ -16,7 +16,7 @@ public class GoogleSearchPage extends AbstractPage {
     @FindBy(how= How.XPATH, using ="//input[@id='lst-ib']")
     private WebElement inputFieldLocator; // = By.xpath("//input[@id='lst-ib']");
 
-    @FindBy(how = How.XPATH, using = "//a[@class='gb_Xf gb_Fa gb_Eb']")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gb_70\"]")
     private WebElement goGoogleEnter;
 
     @FindBy(how = How.XPATH, using = "//span[@class='gb_ab gbii']")
@@ -24,14 +24,18 @@ public class GoogleSearchPage extends AbstractPage {
 
     @FindBy(how = How.XPATH, using = "//div[@class='gb_Db']")
     private WebElement actualMail;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gbwa\"]/div[1]/a")
+    private WebElement chooseService;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"gb49\"]/span[1]")
+    private WebElement enterGoogleDrive;
 
     public void searchFor (String text){
         inputFieldLocator.sendKeys(text);
         inputFieldLocator.submit();
     }
     public void goLoginPage(){
-        goGoogleEnter.isDisplayed();
-        goGoogleEnter.click();
+        WebElement pressEnter = waitFor(ExpectedConditions.elementToBeClickable(goGoogleEnter));
+        pressEnter.click();
     }
     public String getActualMail(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,2);
@@ -40,4 +44,11 @@ public class GoogleSearchPage extends AbstractPage {
         WebElement actMail = wait.until(ExpectedConditions.visibilityOf(actualMail));
         return actMail.getText();
     }
+    public void goToGoogleDrive(){
+        WebElement serviceMenu = waitFor(ExpectedConditions.elementToBeClickable(chooseService));
+        serviceMenu.click();
+        WebElement enterDrive = waitFor(ExpectedConditions.elementToBeClickable(enterGoogleDrive));
+        enterDrive.click();
+    }
+
 }

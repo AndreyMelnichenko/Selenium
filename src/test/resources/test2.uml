@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="588.0" y="364.0">google.Selenium.pages.GoogleResultPage</node>
+    <node x="1418.779761904762" y="0.0">google.Selenium.core.TestListener</node>
+    <node x="893.9297619047619" y="589.0">com.google.SearchGoogleTest</node>
+    <node x="290.0" y="352.0">google.Selenium.pages.GoogleLoginPage</node>
+    <node x="1180.0" y="304.0">google.Selenium.pages.GoogleSearchPage</node>
+    <node x="890.0" y="315.5">google.Selenium.pages.GoogleNewPage</node>
+    <node x="0.0" y="352.0">google.Selenium.pages.GooglePassPage</node>
+    <node x="520.7158730158731" y="47.5">google.Selenium.pages.AbstractPage</node>
+    <node x="1563.3011904761906" y="364.5">google.Selenium.core.WebDriverTestBase</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.google.SearchGoogleTest" target="google.Selenium.core.WebDriverTestBase">
+      <point x="67.14285714285711" y="-76.0" />
+      <point x="1078.572619047619" y="559.0" />
+      <point x="1610.0511904761906" y="559.0" />
+      <point x="-46.75" y="52.0" />
+    </edge>
+    <edge source="google.Selenium.pages.GoogleNewPage" target="google.Selenium.pages.AbstractPage">
+      <point x="67.5" y="-101.0" />
+      <point x="1092.5" y="274.0" />
+      <point x="864.9658730158731" y="274.0" />
+      <point x="114.75" y="64.5" />
+    </edge>
+    <edge source="google.Selenium.pages.GoogleSearchPage" target="google.Selenium.pages.AbstractPage">
+      <point x="-73.5" y="-112.5" />
+      <point x="1253.5" y="264.0" />
+      <point x="910.8658730158729" y="264.0" />
+      <point x="160.64999999999986" y="64.5" />
+    </edge>
+    <edge source="google.Selenium.pages.GoogleLoginPage" target="google.Selenium.pages.AbstractPage">
+      <point x="-69.5" y="-64.5" />
+      <point x="359.5" y="264.0" />
+      <point x="635.4658730158731" y="264.0" />
+      <point x="-114.75" y="64.5" />
+    </edge>
+    <edge source="google.Selenium.pages.GooglePassPage" target="google.Selenium.pages.AbstractPage">
+      <point x="-67.5" y="-64.5" />
+      <point x="67.5" y="244.0" />
+      <point x="543.6658730158731" y="244.0" />
+      <point x="-206.54999999999995" y="64.5" />
+    </edge>
+    <edge source="google.Selenium.pages.GoogleResultPage" target="google.Selenium.pages.AbstractPage">
+      <point x="70.5" y="-52.5" />
+      <point x="799.5" y="284.0" />
+      <point x="773.1658730158729" y="284.0" />
+      <point x="22.949999999999818" y="64.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="948.5" y="370.5" />
+  <SelectedNodes>
+    <node>google.Selenium.pages.GoogleResultPage</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
