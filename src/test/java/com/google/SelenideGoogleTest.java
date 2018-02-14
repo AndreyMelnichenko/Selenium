@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SelenideGoogleTest {
     private String searchData = "Selenide";
 
-    @Test
+
     public void searchGoogleTest() {
         ChromeDriverManager.getInstance().setup();
         Configuration.browser = "CHROME";
@@ -21,7 +21,7 @@ public class SelenideGoogleTest {
         googleSearchPage.compare(searchData);
 
     }
-    @Test
+
     public void searchCompareTest(){
         ChromeDriverManager.getInstance().setup();
         Configuration.browser = "CHROME";
