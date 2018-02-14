@@ -26,20 +26,10 @@ public class WebDriverTestBase {
     @BeforeClass
     protected void SetUp() {
         Configuration.browser = browser;
-        switch (browser) {
-            case CHROME:
+
                 ChromeDriverManager.getInstance().setup();
                 driver = new ChromeDriver();
-                break;
-            case IE:
-                InternetExplorerDriverManager.getInstance().setup();
-                driver = new InternetExplorerDriver();
-                break;
-            default:
-                FirefoxDriverManager.getInstance().setup();
-                driver = new FirefoxDriver();
-                break;
-        }
+                
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 

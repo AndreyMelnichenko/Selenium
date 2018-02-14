@@ -11,7 +11,7 @@ public class DropdownMenuTest extends WebDriverTestBase {
 
     private final String url = "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select";
 
-    //@Test
+    @Test
     public void testDropDownMenu(){
         driver.get(url);
         DropdownMenuPage dropdownMenuPage = new DropdownMenuPage(driver);
