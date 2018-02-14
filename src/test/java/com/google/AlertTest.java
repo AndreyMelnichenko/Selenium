@@ -28,11 +28,8 @@ public class AlertTest extends WebDriverTestBase {
         loginPage.inputLogin();
         GooglePassPage passPage = PageFactory.initElements(driver, GooglePassPage.class);
         passPage.inputPass(driver);
-        //DragAndDrop dragAndDrop = PageFactory.initElements(driver,DragAndDrop.class);
-        //dragAndDrop.moveElement();
+        
         searchPage.goToGoogleDrive();
-        //GoogleDrivePage googleDrivePage = PageFactory.initElements(driver, GoogleDrivePage.class);
-        //googleDrivePage.goTocatalog(driver);
 
     }
 
