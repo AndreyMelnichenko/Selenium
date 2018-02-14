@@ -52,7 +52,7 @@ public class WebDriverTestBase {
 
     @AfterClass
     public void ClosePage() {
-        //driver.close();
+        driver.close();
     }
 
 }
