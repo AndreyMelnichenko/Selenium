@@ -9,7 +9,7 @@ public class AlertTest extends WebDriverTestBase {
     private final String alertPage = "https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm";
     private final String dragAndDropPage = "https://www.google.com.ua";
 
-
+    @Test
     public void alertTest() {
         driver.get(alertPage);
         driver.switchTo().frame("iframeResult");
@@ -19,7 +19,7 @@ public class AlertTest extends WebDriverTestBase {
 
     }
 
-    
+    @Test
     public void dragAndDrop(){
         driver.get(dragAndDropPage);
         GoogleSearchPage searchPage = PageFactory.initElements(driver, GoogleSearchPage.class);

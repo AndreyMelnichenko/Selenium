@@ -21,12 +21,11 @@ import static org.openqa.selenium.remote.BrowserType.IE;
 @Listeners({google.Selenium.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
-    private String browser = System.getProperty("browser",CHROME);
+    private String browser = System.getProperty("browser",FIREFOX);
 
     @BeforeClass
     protected void SetUp() {
         Configuration.browser = browser;
-        Configuration.closeBrowserTimeoutMs=5000;
         switch (browser) {
             case CHROME:
                 ChromeDriverManager.getInstance().setup();
