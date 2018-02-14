@@ -21,7 +21,7 @@ import static org.openqa.selenium.remote.BrowserType.IE;
 @Listeners({google.Selenium.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
-    private String browser = System.getProperty("browser",FIREFOX);
+    private String browser = System.getProperty("browser",CHROME);
 
     @BeforeClass
     protected void SetUp() {
@@ -30,10 +30,6 @@ public class WebDriverTestBase {
             case CHROME:
                 ChromeDriverManager.getInstance().setup();
                 driver = new ChromeDriver();
-                break;
-            case FIREFOX:
-                FirefoxDriverManager.getInstance().setup();
-                driver = new FirefoxDriver();
                 break;
             case IE:
                 InternetExplorerDriverManager.getInstance().setup();
