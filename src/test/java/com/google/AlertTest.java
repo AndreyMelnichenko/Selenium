@@ -28,7 +28,7 @@ public class AlertTest extends WebDriverTestBase {
         loginPage.inputLogin();
         GooglePassPage passPage = PageFactory.initElements(driver, GooglePassPage.class);
         passPage.inputPass(driver);
-        
+
         searchPage.goToGoogleDrive();
 
     }
