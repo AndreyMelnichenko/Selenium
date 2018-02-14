@@ -10,7 +10,7 @@ abstract class AbstractPage {
     private WebDriverWait webDriverWait;
     public AbstractPage(WebDriver webDriver) {
         this.webDriver = webDriver;
-        webDriverWait = new WebDriverWait(this.webDriver, 20);
+        webDriverWait = new WebDriverWait(this.webDriver, 10);
     }
     public WebElement waitFor(ExpectedCondition<WebElement> expectedCondition){
         return webDriverWait.until(expectedCondition);

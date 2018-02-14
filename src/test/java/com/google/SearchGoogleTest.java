@@ -25,7 +25,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
 
     }
 
-    @Test //(dependsOnMethods = {"newsPage"})
+    @Test (dependsOnMethods = {"newsPage"})
     public void loginPage() {
         driver.get(url);
         GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
