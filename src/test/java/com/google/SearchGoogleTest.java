@@ -43,6 +43,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
         GoogleNewPage news = PageFactory.initElements(driver, GoogleNewPage.class);
         news.goNewsPage();
         assertEquals(news.getActualPage(),"Украина");
+        assertEquals(news.getActualPage(),"World");
     }
 }
 
