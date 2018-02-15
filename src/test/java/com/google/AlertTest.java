@@ -1,10 +1,7 @@
 package com.google;
 
 import google.Selenium.core.WebDriverTestBase;
-import google.Selenium.pages.AlertPage;
-import google.Selenium.pages.GoogleLoginPage;
-import google.Selenium.pages.GooglePassPage;
-import google.Selenium.pages.GoogleSearchPage;
+import google.Selenium.pages.*;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -37,5 +34,7 @@ public class AlertTest extends WebDriverTestBase {
         GooglePassPage passPage = PageFactory.initElements(driver, GooglePassPage.class);
         passPage.inputPass(driver);
         searchPage.goToGoogleDrive();
+        GoogleDrivePage googleDrivePage = PageFactory.initElements(driver, GoogleDrivePage.class);
+        googleDrivePage.goTocatalog(driver);
     }
 }
