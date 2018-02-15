@@ -37,10 +37,6 @@ public class SelenideTestBase {
                 InternetExplorerDriverManager.getInstance().setup();
                 driver = new InternetExplorerDriver();
                 break;
-            default:
-                FirefoxDriverManager.getInstance().setup();
-                driver = new FirefoxDriver();
-                break;
         }
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         driver.manage().window().maximize();
