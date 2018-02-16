@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.remote.BrowserType.*;
 
-@Listeners({google.Selenium.core.TestListener.class})
+//@Listeners({google.Selenium.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
     //private String browser = System.getProperty("browser", CHROME);
