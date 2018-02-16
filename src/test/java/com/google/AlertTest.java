@@ -24,7 +24,7 @@ public class AlertTest extends WebDriverTestBase {
         alertPage.alertToOk(driver);
     }
 
-    @Test
+    //@Test
     public void dragAndDrop(){
         driver.get(dragAndDropPage);
         GoogleSearchPage searchPage = PageFactory.initElements(driver, GoogleSearchPage.class);
@@ -34,7 +34,7 @@ public class AlertTest extends WebDriverTestBase {
         GooglePassPage passPage = PageFactory.initElements(driver, GooglePassPage.class);
         passPage.inputPass(driver);
         searchPage.goToGoogleDrive();
-        GoogleDrivePage googleDrivePage = PageFactory.initElements(driver, GoogleDrivePage.class);
-        googleDrivePage.goTocatalog(driver);
+        //GoogleDrivePage googleDrivePage = PageFactory.initElements(driver, GoogleDrivePage.class);
+        //googleDrivePage.goTocatalog(driver);
     }
 }

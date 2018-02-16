@@ -25,7 +25,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
 
     }
 
-    @Test (dependsOnMethods = {"newsPage"})
+    @Test //(dependsOnMethods = {"newsPage"})
     public void loginPage() {
         driver.get(url);
         GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
@@ -37,13 +37,13 @@ public class SearchGoogleTest extends WebDriverTestBase {
         Assert.assertEquals(page.getActualMail(driver), PropertiesCache.getProperty("login.user"));
     }
 
-    @Test (dependsOnMethods = {"searchGoogleTest"})
+    @Test //(dependsOnMethods = {"searchGoogleTest"})
     public void newsPage(){
         driver.get(url);
         GoogleNewPage news = PageFactory.initElements(driver, GoogleNewPage.class);
         news.goNewsPage();
         assertEquals(news.getActualPage(),"Украина");
-        assertEquals(news.getActualPage(),"World");
+        //assertEquals(news.getActualPage(),"World");
     }
 }
 
