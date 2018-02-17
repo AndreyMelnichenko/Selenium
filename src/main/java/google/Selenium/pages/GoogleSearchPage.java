@@ -1,5 +1,6 @@
 package google.Selenium.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,7 @@ public class GoogleSearchPage extends AbstractPage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"gb49\"]/span[1]")
     private WebElement enterGoogleDrive;
 
+    @Step("Searches for {0} test")
     public void searchFor (String text){
         inputFieldLocator.sendKeys(text);
         inputFieldLocator.submit();

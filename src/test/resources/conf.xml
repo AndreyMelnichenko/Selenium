@@ -13,6 +13,7 @@
             <classes>
                 <class name="com.google.AlertTest" />
                 <class name="com.google.SearchGoogleTest" />
+                <class name="com.google.SelenideGoogleTest.java" />
             </classes>
         </test>
     </tests>

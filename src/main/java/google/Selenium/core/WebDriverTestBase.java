@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 import static org.openqa.selenium.remote.BrowserType.CHROME;
 import static org.openqa.selenium.remote.BrowserType.FIREFOX;
 
-//@Listeners({google.Selenium.core.TestListener.class})
+@Listeners({google.Selenium.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
     private String browser = System.getProperty("browser", CHROME);
@@ -29,7 +30,7 @@ public class WebDriverTestBase {
 
     @BeforeClass
     protected void SetUp() throws MalformedURLException, UnexpectedException {
-        if ((System.getProperty("user.name")).equals("1Andrey")) {
+        if (((System.getProperty("user.name")).equals("1Andrey"))||((System.getProperty("user.name")).equals("andrey"))) {
             Configuration.browser = browser;
             switch (browser) {
                 case CHROME:

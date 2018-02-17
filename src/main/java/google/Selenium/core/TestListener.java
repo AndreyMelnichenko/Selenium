@@ -2,6 +2,8 @@ package google.Selenium.core;
 
 import java.io.File;
 import java.io.IOException;
+
+import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,14 +23,12 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         driver = ((WebDriverTestBase) iTestResult.getInstance()).driver;
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(scrFile,
-                    new File("/home/andrey/git/Selenium/src/main/java/google/Selenium/screen/"
-                            + iTestResult.getMethod().getMethodName() + ".png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        saveScreenshot(iTestResult.getMethod().getQualifiedName());
+    }
+
+    @Attachment(value = "{0}", type = "image/png")
+    public byte[] saveScreenshot (String qualifiedName){
+        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     }
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
