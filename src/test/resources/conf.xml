@@ -1,19 +1,23 @@
-<suite name="Parallel Tests" verbose="1" thread-count="1" parallel="tests">
+<suite name="Parallel Tests" verbose="2" thread-count="1" parallel="tests">
     <tests>
-        <!--<test name="Windows + Chrome Test">-->
-        <!--<parameters>-->
-        <!--<parameter name="platform" value="WIN8_1" />-->
-        <!--<parameter name="remoteBrowser" value="chrome"/>-->
-        <!--</parameters>-->
-        <!--<classes>-->
-        <!--<class name="com.google.GoogleSearchTest" />-->
-        <!--</classes>-->
-        <!--</test>-->
-        <test name="Windows 10 + Chrome Test">
+        <test name="Linux + Chrome Test">
+            <parameters>
+                <parameter name="platform" value="Linux" />
+                <parameter name="remoteBrowser" value="chrome"/>
+            </parameters>
             <classes>
                 <class name="com.google.AlertTest" />
                 <class name="com.google.SearchGoogleTest" />
-                <!--<class name="com.google.SelenideGoogleTest" />-->
+            </classes>
+        </test>
+        <test name="Linux + FireFox Test">
+            <parameters>
+                <parameter name="platform" value="Linux" />
+                <parameter name="remoteBrowser" value="firefox"/>
+            </parameters>
+            <classes>
+                <class name="com.google.AlertTest" />
+                <class name="com.google.SearchGoogleTest" />
             </classes>
         </test>
     </tests>
