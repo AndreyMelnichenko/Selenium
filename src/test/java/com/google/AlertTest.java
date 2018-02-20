@@ -25,7 +25,7 @@ public class AlertTest extends WebDriverTestBase {
         alertPage.alertToOk(driver);
     }
 
-    //@Test
+    @Test
     public void dragAndDrop(){
         driver.get(dragAndDropPage);
         GoogleSearchPage searchPage = PageFactory.initElements(driver, GoogleSearchPage.class);

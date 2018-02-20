@@ -1,10 +1,10 @@
 <suite name="Parallel Tests" verbose="1" thread-count="1" parallel="tests">
     <tests>
         <test name="Linux + Chrome Test">
-        <!--<parameters>
+        <parameters>
             <parameter name="platform" value="Linux" />
             <parameter name="remoteBrowser" value="chrome"/>
-        </parameters>-->
+        </parameters>
         <classes>
             <class name="com.google.AlertTest" />
             <class name="com.google.SearchGoogleTest" />

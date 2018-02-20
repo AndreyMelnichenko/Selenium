@@ -43,12 +43,12 @@ public class WebDriverTestBase {
                     break;
             }
         } else {
-            /*DesiredCapabilities caps = DesiredCapabilities.chrome();
+            DesiredCapabilities caps = DesiredCapabilities.chrome();
             caps.setCapability("platform", "Windows 10");
             caps.setCapability("version", "63.0");
             caps.setCapability("screenResolution", "1280x1024");
 
-            driver = new RemoteWebDriver(new URL(URL), caps);*/
+            driver = new RemoteWebDriver(new URL(URL), caps);
         }
 
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
