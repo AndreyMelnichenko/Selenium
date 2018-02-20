@@ -35,6 +35,7 @@ public class GoogleSearchPage extends AbstractPage {
         inputFieldLocator.sendKeys(text);
         inputFieldLocator.submit();
     }
+    @Step ("Open Log-in page")
     public void goLoginPage(){
         WebElement pressEnter = waitFor(ExpectedConditions.elementToBeClickable(goGoogleEnter));
         pressEnter.click();
