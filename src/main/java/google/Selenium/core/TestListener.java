@@ -22,7 +22,7 @@ public class TestListener implements ITestListener {
         saveScreenshot(iTestResult.getMethod().getQualifiedName());
     }
 
-    @Attachment(value = "{0}", type = "image/png")
+    @Attachment(value = "Screen", type = "image/png")
     public byte[] saveScreenshot (String qualifiedName){
         return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     }
