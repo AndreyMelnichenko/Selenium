@@ -1,4 +1,4 @@
-<suite name="Parallel Tests" verbose="2" thread-count="1" parallel="tests">
+<suite name="Parallel Tests" verbose="1" thread-count="1" parallel="tests">
     <tests>
         <test name="Linux + Chrome Test">
         <!--<parameters>
