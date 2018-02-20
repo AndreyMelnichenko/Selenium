@@ -15,7 +15,7 @@ public class AlertTest extends WebDriverTestBase {
     private final String dragAndDropPage = "https://www.google.com.ua";
 
 
-    @Description
+    @Description ("Test advanced interaction")
     @Test
     public void alertTest() {
         driver.get(alertPage);
