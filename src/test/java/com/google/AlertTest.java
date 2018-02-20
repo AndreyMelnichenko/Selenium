@@ -14,6 +14,7 @@ public class AlertTest extends WebDriverTestBase {
     private final String alertPage = "https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm";
     private final String dragAndDropPage = "https://www.google.com.ua";
 
+
     @Description
     @Test
     public void alertTest() {

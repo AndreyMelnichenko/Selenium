@@ -15,17 +15,17 @@ public class SearchGoogleTest extends WebDriverTestBase {
     private final String searchData = "Selenium";
     private final String url = "https://www.google.com.ua";
 
-    @Test
+    @Test (priority = 1)
     public void searchGoogleTest() {
         driver.get(url);
         GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
         page.searchFor(searchData);
         GoogleResultPage resultPage = PageFactory.initElements(driver, GoogleResultPage.class);
-        assertTrue(resultPage.findLink().getText().contains("Украина")); //searchData
+        assertTrue(resultPage.findLink().getText().contains(searchData)); //searchData
 
     }
 
-    //@Test //(dependsOnMethods = {"newsPage"})
+    @Test (priority = 3)
     public void loginPage() {
         driver.get(url);
         GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
@@ -37,7 +37,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
         Assert.assertEquals(page.getActualMail(driver), PropertiesCache.getProperty("login.user"));
     }
 
-    //@Test //(dependsOnMethods = {"searchGoogleTest"})
+    @Test (priority = 2)
     public void newsPage(){
         driver.get(url);
         GoogleNewPage news = PageFactory.initElements(driver, GoogleNewPage.class);
