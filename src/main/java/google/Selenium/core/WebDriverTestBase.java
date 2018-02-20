@@ -30,7 +30,7 @@ public class WebDriverTestBase {
 
     @BeforeClass
     protected void SetUp() throws MalformedURLException, UnexpectedException {
-        if ((System.getProperty("user.name")).equals("andrey")) {
+        if ((System.getProperty("user.name").toLowerCase()).equals("andrey")) {
             Configuration.browser = browser;
             switch (browser) {
                 case CHROME:
