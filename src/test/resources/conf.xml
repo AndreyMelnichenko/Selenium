@@ -10,15 +10,15 @@
                 <class name="com.google.SearchGoogleTest" />
             </classes>
         </test>
-        <test name="Linux + FireFox Test">
-            <parameters>
-                <parameter name="platform" value="Linux" />
-                <parameter name="remoteBrowser" value="firefox"/>
-            </parameters>
-            <classes>
-                <class name="com.google.AlertTest" />
-                <class name="com.google.SearchGoogleTest" />
-            </classes>
-        </test>
-    </tests>
-</suite>
+        <!-- <test name="Linux + FireFox Test">
+             <parameters>
+                 <parameter name="platform" value="Linux" />
+                 <parameter name="remoteBrowser" value="firefox"/>
+             </parameters>
+             <classes>
+                 <class name="com.google.AlertTest" />
+                 <class name="com.google.SearchGoogleTest" />
+             </classes>
+         </test>-->
+     </tests>
+ </suite>
