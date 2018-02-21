@@ -10,7 +10,7 @@
             <class name="com.google.SearchGoogleTest" />
         </classes>
     </test>
-    <!-- <test name="Linux + FireFox Test">
+    <test name="Linux + FireFox Test">
          <parameters>
              <parameter name="platform" value="Linux" />
              <parameter name="remoteBrowser" value="firefox"/>
@@ -19,6 +19,6 @@
              <class name="com.google.AlertTest" />
              <class name="com.google.SearchGoogleTest" />
          </classes>
-     </test>-->
+     </test>
      </tests>
  </suite>
