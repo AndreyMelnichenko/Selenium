@@ -23,7 +23,7 @@ import static org.openqa.selenium.remote.BrowserType.FIREFOX;
 @Listeners({google.Selenium.core.TestListener.class})
 public class WebDriverTestBase {
     protected WebDriver driver;
-    private String browser = System.getProperty("browser", CHROME);
+    private String browser = System.getProperty("browser", "remote");
     public static final String USERNAME = "a.melnychenko";
     public static final String ACCESS_KEY = "2bd030ff-f8a5-4149-9dce-0828e8bc4100";
     public static final String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
