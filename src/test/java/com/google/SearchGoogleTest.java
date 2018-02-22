@@ -19,6 +19,7 @@ public class SearchGoogleTest extends WebDriverTestBase {
     @Test (priority = 1)
     public void searchGoogleTest() {
         driver.get(url);
+
         GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
         page.searchFor(searchData);
         GoogleResultPage resultPage = PageFactory.initElements(driver, GoogleResultPage.class);
