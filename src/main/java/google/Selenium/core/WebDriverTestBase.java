@@ -31,7 +31,7 @@ public class WebDriverTestBase {
     @Parameters({"platform","remoteBrowser"})
     @BeforeClass
     protected void SetUp(@Optional String platform, @Optional String remoteBrowser) throws MalformedURLException, UnexpectedException {
-        if ((System.getProperty("user.name").toLowerCase()).equals("11andrey")) {
+        if ((System.getProperty("user.name").toLowerCase()).equals("andrey")) {
             Configuration.browser = browser;
             switch (browser) {
                 case CHROME:
