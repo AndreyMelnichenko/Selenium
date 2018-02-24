@@ -3,6 +3,7 @@ package google.Selenium.util;
 public class mainClass {
     public static void main(String[] args) {
         System.out.println(System.getProperty("user.name").toLowerCase());
+        System.out.println(System.getProperty("os.name").toLowerCase());
         double a = 3;
         double b = 2.5;
         double c = -0.5;

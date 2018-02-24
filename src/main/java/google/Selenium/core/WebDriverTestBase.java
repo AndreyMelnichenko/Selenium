@@ -28,7 +28,7 @@ public class WebDriverTestBase {
     public static final String ACCESS_KEY = "2bd030ff-f8a5-4149-9dce-0828e8bc4100";
     public static final String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
 
-    @Parameters({"platform","remoteBrowser"})
+    @Parameters({"platform", "remoteBrowser"})
     @BeforeClass
     protected void SetUp(@Optional String platform, @Optional String remoteBrowser) throws MalformedURLException, UnexpectedException {
         if ((System.getProperty("user.name").toLowerCase()).equals("andrey")) {
@@ -60,11 +60,18 @@ public class WebDriverTestBase {
         driver.manage().window().maximize();
     }
 
-    private DesiredCapabilities setDesiredCapabilities(String platform, String remoteBrowser)throws MalformedURLException {
+    private DesiredCapabilities setDesiredCapabilities(String platform, String remoteBrowser) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        if (platform.equalsIgnoreCase(Platform.WIN10.name())){
-            caps.setPlatform(Platform.WIN10);
-            caps.setBrowserName(remoteBrowser);
+        if ((System.getProperty("os.name").toLowerCase()).equals("linux")) {
+            if (platform.equalsIgnoreCase(Platform.LINUX.name())) {
+                caps.setPlatform(Platform.LINUX);
+                caps.setBrowserName(remoteBrowser);
+            }
+        } else {
+            if (platform.equalsIgnoreCase(Platform.WIN10.name())) {
+                caps.setPlatform(Platform.WIN10);
+                caps.setBrowserName(remoteBrowser);
+            }
         }
         return caps;
     }
