@@ -1,4 +1,4 @@
-package com.ua.p900;
+package ua.p900;
 
 
 import cucumber.api.CucumberOptions;
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-@CucumberOptions(features = "src/test/java/com/ua/p900/fetures/login", format = {"pretty",
+/*@CucumberOptions(features = "src/test/java/com/ua/p900/fetures/login", format = {"pretty",
         "html:target/site/cucumber-pretty"})
 public class FeaturesRunner extends AbstractTestNGCucumberTests {
     private WebDriver driver;
@@ -23,4 +23,4 @@ public class FeaturesRunner extends AbstractTestNGCucumberTests {
     protected void TearDown (){
         driver.quit();
     }
-}
+}*/

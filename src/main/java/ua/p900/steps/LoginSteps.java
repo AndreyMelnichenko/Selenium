@@ -1,10 +1,8 @@
-package com.ua.p900.steps;
+package ua.p900.steps;
 
-import com.ua.p900.FeaturesRunner;
 import com.ua.p900.pages.MainPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
-import google.Selenium.core.WebDriverTestBase;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

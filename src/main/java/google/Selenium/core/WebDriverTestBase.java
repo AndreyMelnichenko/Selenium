@@ -3,7 +3,6 @@ package google.Selenium.core;
 import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,6 +53,7 @@ public class WebDriverTestBase {
             caps.setCapability("screenResolution", "1280x1024");
 
             driver = new RemoteWebDriver(new URL(URL), caps);
+
         }
 
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);

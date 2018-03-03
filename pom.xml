@@ -66,11 +66,11 @@
             <artifactId>cucumber-testng</artifactId>
             <version>${io.cucumber-testng.version}</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm</artifactId>
             <version>${io.cucumber-jvm.version}</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <plugins>
@@ -79,9 +79,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin}</version>
                 <configuration>
-                    <!--<argLine>-->
-                        <!-- -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
-                    <!--</argLine>-->
+                    <argLine>
+                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/conf.xml</suiteXmlFile>
                     </suiteXmlFiles>
