@@ -1,6 +1,6 @@
-<suite name="Parallel Tests" verbose="1" thread-count="1" parallel="tests">
+<suite name="Parallel Tests" verbose="1" thread-count="2" parallel="tests">
     <tests>
-        <test name="Linux + Chrome Test">
+        <test name="Chrome Test">
         <parameters>
             <parameter name="platform" value="Linux" />
             <parameter name="remoteBrowser" value="chrome"/>
@@ -10,7 +10,7 @@
             <class name="com.google.SearchGoogleTest" />
         </classes>
     </test>
-    <test name="Linux + FireFox Test">
+    <test name="FireFox Test">
          <parameters>
              <parameter name="platform" value="Linux" />
              <parameter name="remoteBrowser" value="firefox"/>

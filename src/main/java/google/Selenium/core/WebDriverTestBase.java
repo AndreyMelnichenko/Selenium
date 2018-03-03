@@ -57,7 +57,7 @@ public class WebDriverTestBase {
         }
 
         driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
     }
 
     private DesiredCapabilities setDesiredCapabilities(String platform, String remoteBrowser) throws MalformedURLException {
