@@ -17,8 +17,10 @@ public class SelenideGoogleTest {
         Configuration.browser = "CHROME";
         open("https://www.google.com.ua");
         GoogleSearchPage googleSearchPage = new GoogleSearchPage();
-        googleSearchPage.searchFor(searchData);
-        googleSearchPage.compare(searchData);
+        googleSearchPage
+                .searchFor(searchData)
+                .compare(searchData);
+
 
     }
     @Test
