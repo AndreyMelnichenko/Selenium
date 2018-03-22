@@ -10,10 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.BeforeClass;
 
-import java.util.concurrent.TimeUnit;
-import static org.openqa.selenium.remote.BrowserType.CHROME;
-import static org.openqa.selenium.remote.BrowserType.FIREFOX;
-import static org.openqa.selenium.remote.BrowserType.IE;
+import static org.openqa.selenium.remote.BrowserType.*;
 
 public class SelenideTestBase {
 
@@ -23,7 +20,6 @@ public class SelenideTestBase {
     @BeforeClass
     protected void SetUp() {
         Configuration.browser = browser;
-        Configuration.closeBrowserTimeoutMs=5000;
         switch (browser) {
             case CHROME:
                 ChromeDriverManager.getInstance().setup();
@@ -38,8 +34,6 @@ public class SelenideTestBase {
                 driver = new InternetExplorerDriver();
                 break;
         }
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
 
     }
 }
